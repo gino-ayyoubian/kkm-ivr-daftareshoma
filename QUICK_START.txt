@@ -1,0 +1,125 @@
+========================================
+KKM IVR SYSTEM - QUICK START GUIDE
+========================================
+
+Designed & Developed by: Gino Ayyoubian
+For: KKM International Group
+Platform: Daftareshoma Cloud
+Version: 1.0.0
+Date: December 2025
+
+========================================
+
+در 3 گام شروع کنید | GET STARTED IN 3 STEPS
+
+========================================
+
+
+گام 1: آماده‌سازی | STEP 1: PREPARATION
+----------------------------------------
+
+1. نصب Python 3.7+ یا بالاتر
+   Install Python 3.7 or higher:
+   https://python.org/downloads
+
+2. نصب Git
+   Install Git:
+   https://git-scm.com/downloads
+
+3. دریافت API Key رایگان ElevenLabs
+   Get free ElevenLabs API Key:
+   https://elevenlabs.io
+   - ثبت‌نام رایگان (Sign up for free)
+   - Settings > API Keys
+   - 10,000 کاراکتر/ماه رایگان (10,000 characters/month free)
+
+
+گام 2: نصب و پیکربندی | STEP 2: INSTALLATION & CONFIGURATION
+----------------------------------------
+
+# کلون کردن پروژه | Clone the repository
+git clone https://github.com/gino-ayyoubian/kkm-ivr-daftareshoma.git
+cd kkm-ivr-daftareshoma
+
+# نصب وابستگی‌ها | Install dependencies
+pip install -r requirements.txt
+
+# ایجاد فایل .env | Create .env file
+echo "ELEVENLABS_API_KEY=your_api_key_here" > .env
+
+# ویرایش فایل .env و افزودن API Key واقعی
+# Edit .env and add your real API Key
+nano .env  # or use your favorite text editor
+
+
+گام 3: تولید فایل‌های صوتی | STEP 3: GENERATE AUDIO FILES
+----------------------------------------
+
+# تولید فایل‌های صوتی | Generate audio files
+python scripts/generate_audio_elevenlabs.py
+
+# تبدیل به فرمت تلفنی 8kHz | Convert to phone format
+python scripts/convert_to_8khz.py ivr_audio_files/
+
+# نتیجه | Result:
+# - 12 فایل فارسی (12 Farsi files)
+# - 7 فایل انگلیسی (7 English files)
+# - فرمت: WAV, 8kHz, Mono, 16-bit
+
+
+========================================
+مرحله بعدی | NEXT STEPS
+========================================
+
+1. بارگذاری فایل‌ها در دفترشما
+   Upload files to Daftareshoma:
+   https://panel.daftareshoma.com
+
+2. پیکربندی IVR
+   Configure IVR using JSON files in config/
+
+3. تست سیستم
+   Test system with real phone calls
+
+4. راه‌اندازی نهایی
+   Final launch
+
+
+========================================
+شماره‌های تماس | CONTACT NUMBERS
+========================================
+
+خط اصلی | Main Line:     +98 21 2842 4430
+خط عملیات | Operations:  +98 21 2842 4630  
+خط پشتیبانی | Support:     +98 21 9103 0822
+
+
+========================================
+مستندات کامل | FULL DOCUMENTATION
+========================================
+
+For detailed documentation, see:
+- docs/installation_guide.txt
+- docs/daftareshoma_configuration_guide.txt
+- README.md
+
+
+========================================
+پشتیبانی | SUPPORT
+========================================
+
+Technical Support:
+- Email: info@kkm-intl.org
+- Phone: +98 21 2842 4430
+- Website: https://kkm-intl.org
+
+Legal/Licensing:
+- Email: legal@kkm-intl.org
+
+
+========================================
+
+© 2025 KKM International Group
+Designed & Developed by Gino Ayyoubian
+
+========================================
